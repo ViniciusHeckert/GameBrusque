@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Educacional Brusque</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <section id="screen-inicial" style="display: flex;">
+    <div class="screen-content">
+      <h1>Quiz Educacional<br>Brusque</h1>
+      <p class="subtitle">Teste seus conhecimentos sobre a cidade de Brusque!</p>
+      <button id="btn-entrar" class="btn-primary">Entrar</button>
+    </div>
+  </section>
+
+  <section id="screen-cadastro" style="display: none;">
+    <div class="screen-content">
+      <h2>Cadastrar-se</h2>
+      <form id="form-cadastro" novalidate>
+        <div class="field-group">
+          <label for="input-escola">Escola</label>
+          <input type="text" id="input-escola" name="escola" placeholder="Nome da sua escola" />
+          <span class="field-error" id="error-escola"></span>
+        </div>
+        <div class="field-group">
+          <label for="input-nome">Nome</label>
+          <input type="text" id="input-nome" name="nome" placeholder="Seu nome completo" />
+          <span class="field-error" id="error-nome"></span>
+        </div>
+        <div class="field-group">
+          <label for="input-idade">Idade</label>
+          <input type="number" id="input-idade" name="idade" placeholder="Sua idade" min="1" />
+          <span class="field-error" id="error-idade"></span>
+        </div>
+        <button type="submit" class="btn-primary">Criar conta</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="screen-menu" style="display: none;">
+    <div class="screen-content">
+      <h2 class="menu-titulo">MENU PRINCIPAL</h2>
+      <p class="menu-saudacao">Olá, <span id="menu-nome-usuario"></span>!</p>
+      <p>Pronto para testar seus conhecimentos sobre Brusque?</p>
+      <button id="btn-iniciar-jogo" class="btn-primary">INICIAR JOGO</button>
+      <button id="btn-sair" class="btn-secondary">SAIR</button>
+    </div>
+  </section>
+
+  <section id="screen-pergunta" style="display: none;">
+    <div class="screen-content">
+      <div class="pergunta-header">
+        <span id="pergunta-usuario"></span>
+        <span id="pergunta-progresso"></span>
+      </div>
+      <h2 id="pergunta-enunciado"></h2>
+      <div id="opcoes-grid" class="opcoes-grid">
+        <div class="opcao-item" data-index="0">
+          <img id="opcao-img-0" src="" alt="" />
+        </div>
+        <div class="opcao-item" data-index="1">
+          <img id="opcao-img-1" src="" alt="" />
+        </div>
+        <div class="opcao-item" data-index="2">
+          <img id="opcao-img-2" src="" alt="" />
+        </div>
+        <div class="opcao-item" data-index="3">
+          <img id="opcao-img-3" src="" alt="" />
+        </div>
+      </div>
+      <span class="field-error" id="pergunta-alerta"></span>
+      <button id="btn-enviar" class="btn-primary">Enviar</button>
+    </div>
+  </section>
+
+  <section id="screen-resultado" style="display: none;">
+    <div class="screen-content">
+      <h2 class="resultado-titulo">⭐ RESULTADO ⭐</h2>
+      <div id="resultado-emoji" class="resultado-emoji"></div>
+      <h3 id="resultado-mensagem"></h3>
+      <p id="resultado-pontuacao" class="resultado-pontuacao"></p>
+      <p id="resultado-nome-paragrafo">Parabéns, <span id="resultado-nome-usuario"></span>!</p>
+      <button id="btn-tentar-novamente" class="btn-primary">Tentar novamente</button>
+    </div>
+  </section>
+
+  
+</body>
+</html>
