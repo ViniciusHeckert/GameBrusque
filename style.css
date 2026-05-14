@@ -34,3 +34,111 @@
   --sombra-botao:  0 3px 8px rgba(0, 0, 0, 0.25);
   --sombra-opcao:  0 2px 8px rgba(0, 0, 0, 0.15);
 }
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  color: var(--cor-texto);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--fonte-principal);
+  border: none;
+  outline: none;
+}
+
+input {
+  font-family: var(--fonte-principal);
+}
+
+
+section[id^="screen-"] {
+  display: none; 
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+section[id^="screen-"]:not(#screen-inicial) {
+  background: linear-gradient(135deg, #f5e6d3 0%, #e8c99a 50%, #d4a96a 100%);
+}
+
+
+.screen-content {
+  background: var(--cor-fundo-card);
+  border-radius: var(--raio-lg);
+  box-shadow: var(--sombra-card);
+  padding: var(--espaco-xl) var(--espaco-lg);
+  width: 100%;
+  max-width: 420px;
+  margin: var(--espaco-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espaco-md);
+  text-align: center;
+}
+
+
+#screen-inicial {
+  background-image: url('../assets/images/bg-brusque.jpg'),
+                    linear-gradient(135deg, #4a7c59 0%, #2d5a3d 50%, #1a3a28 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+#screen-inicial::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--cor-overlay);
+  z-index: 0;
+}
+
+#screen-inicial .screen-content {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#screen-inicial h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--cor-texto-claro);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  line-height: 1.2;
+}
+
+#screen-inicial .subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
