@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+
+:root {
+
+  --cor-primaria:       #7B4F2E;
+  --cor-primaria-hover: #5E3A1F;
+  --cor-secundaria:     #C49A6C;
+  --cor-secundaria-hover: #A87D50;
+  --cor-destaque:       #F0C060;
+  --cor-erro:           #D32F2F;
+  --cor-texto:          #2C1A0E;
+  --cor-texto-claro:    #FFFFFF;
+  --cor-fundo-card:     rgba(255, 255, 255, 0.92); 
+  --cor-overlay:        rgba(0, 0, 0, 0.45);
+
+
+  --fonte-principal: 'Nunito', 'Segoe UI', Arial, sans-serif;
+
+
+  --espaco-xs:  0.25rem;
+  --espaco-sm:  0.5rem;
+  --espaco-md:  1rem;
+  --espaco-lg:  1.5rem;
+  --espaco-xl:  2rem;
+  --espaco-2xl: 3rem;
+
+  --raio-sm:  8px;
+  --raio-md:  14px;
+  --raio-lg:  20px;
+  --raio-pill: 50px;
+
+  --sombra-card:   0 4px 20px rgba(0, 0, 0, 0.18);
+  --sombra-botao:  0 3px 8px rgba(0, 0, 0, 0.25);
+  --sombra-opcao:  0 2px 8px rgba(0, 0, 0, 0.15);
+}
