@@ -1,18 +1,19 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
 
 
 :root {
 
-  --cor-primaria:       #7B4F2E;
-  --cor-primaria-hover: #5E3A1F;
-  --cor-secundaria:     #C49A6C;
+  --cor-primaria:       #7B4F2E;   
+  --cor-primaria-hover: #5E3A1F;   
+  --cor-secundaria:     #C49A6C;   
   --cor-secundaria-hover: #A87D50;
-  --cor-destaque:       #F0C060;
-  --cor-erro:           #D32F2F;
-  --cor-texto:          #2C1A0E;
-  --cor-texto-claro:    #FFFFFF;
+  --cor-destaque:       #F0C060;   
+  --cor-erro:           #D32F2F;   
+  --cor-texto:          #2C1A0E;   
+  --cor-texto-claro:    #FFFFFF;  
   --cor-fundo-card:     rgba(255, 255, 255, 0.92); 
-  --cor-overlay:        rgba(0, 0, 0, 0.45);
+  --cor-overlay:        rgba(0, 0, 0, 0.45);       
 
 
   --fonte-principal: 'Nunito', 'Segoe UI', Arial, sans-serif;
@@ -141,4 +142,106 @@ section[id^="screen-"]:not(#screen-inicial) {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, var(--cor-primaria) 0%, var(--cor-primaria-hover) 100%);
+  color: var(--cor-texto-claro);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 2rem;
+  border-radius: var(--raio-pill);
+  box-shadow: var(--sombra-botao);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  width: 100%;
+  max-width: 280px;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: linear-gradient(180deg, var(--cor-primaria-hover) 0%, #3d2410 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.35);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--sombra-botao);
+}
+
+.btn-secondary {
+  background: linear-gradient(180deg, var(--cor-secundaria) 0%, var(--cor-secundaria-hover) 100%);
+  color: var(--cor-texto-claro);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 2rem;
+  border-radius: var(--raio-pill);
+  box-shadow: var(--sombra-botao);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  width: 100%;
+  max-width: 280px;
+  text-transform: uppercase;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background: linear-gradient(180deg, var(--cor-secundaria-hover) 0%, #8a6035 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+#screen-cadastro h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--cor-primaria);
+}
+
+#form-cadastro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-sm);
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--espaco-xs);
+  width: 100%;
+}
+
+.field-group label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+}
+
+.field-group input {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  border: 2px solid #d4b896;
+  border-radius: var(--raio-md);
+  font-size: 1rem;
+  color: var(--cor-texto);
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field-group input:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 3px rgba(123, 79, 46, 0.2);
+}
+
+.field-group input.input-invalid {
+  border-color: var(--cor-erro);
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.15);
 }
